@@ -17,7 +17,7 @@ module.exports = (app, axios, newsApi) => {
     let term = req.params.source;
     let data = await axios({
       method: 'GET',
-      url: `https://newsapi.org/v2/everything?sources=${term}&language=en&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/everything?language=en&sources=${term}&language=en&apiKey=${apiKey}`
     }).then((data) => {
       if(data.data.articles.length > 0){
         newsApi.gatherSourceStories(data.data.articles, res);

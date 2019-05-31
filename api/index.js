@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/public'));
 require('./controller/newsapi')(app);
 
 app.get('/about', (req, res) => {
-    res.render('Home.ejs');
+    res.json({object: 'value'});
 });
 
 app.get('/', (req, res) => {
@@ -28,5 +28,5 @@ app.get('/login', (req, res) => {
     res.send('Log in')
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT);
