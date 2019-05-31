@@ -92,5 +92,4 @@ In order for you to develop and contribute, you will need to head over to NewsAP
 │   └── yarn.lock
 ├── package-lock.json
 ├── package.json
-└── treeProject.txt
 ```
