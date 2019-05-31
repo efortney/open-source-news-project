@@ -1,0 +1,25 @@
+{
+  "name": "spotlight",
+  "version": "1.0.0",
+  "description": "A simple news tool",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js --prefix api",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efortney/spotlight.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efortney/spotlight/issues"
+  },
+  "homepage": "https://github.com/efortney/spotlight#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
