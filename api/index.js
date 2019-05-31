@@ -16,17 +16,10 @@ app.use(express.static(__dirname + '/public'));
 // newsapi routes 
 require('./controller/newsapi')(app);
 
-app.get('/about', (req, res) => {
-    res.json({object: 'value'});
-});
-
 app.get('/', (req, res) => {
     res.redirect('/topstories');
 });
 
-app.get('/login', (req, res) => {
-    res.send('Log in')
-});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
