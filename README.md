@@ -26,15 +26,23 @@ Feel free to log an issue and tag it as a feature request if you have an idea fo
 * Node.js
 * Thats it, we're keeping it as simple as we can
 
-### Starting the server 
+### Starting the API server 
 1. From a terminal run ```git clone https://github.com/efortney/spotlight.git ```
     * This will clone spotlight into the current directory
 2. ``` cd spotlight ```
     * This will place you into the spotlight directory that you just cloned
-3. ``` npm i ```
-    * This will install all the dependencies required for the project. To see the full list, check the package.json file
+3. run ``` cd api ```
+    * run ``` npm i ```
+    * This will install all the dependencies required for the project server. To see the full list, check the package.json file
 4. ``` npm start ```
-    * This starts the development server, it will run through nodemon at localhost:3000.
+    * This starts the development server, it will run through nodemon at localhost:3001.
+    
+### Starting the Client Server
+1. From the root directory, ``` cd client ```
+2. run ``` npm i ```
+3. run ``` npm start ``` 
+
+**We are proxying client and api from port 3000 to 3001**
     
 ### Config.js
 The config file is built in order to work with Heroku without exposing our precious. (Lord of the Rings, anyone?)
@@ -46,7 +54,7 @@ In order for you to develop and contribute, you will need to head over to NewsAP
     } 
 ```
 
-## Structure 
+## API Structure 
 ```
 ├── README.md
 ├── config.js
