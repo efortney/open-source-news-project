@@ -8,7 +8,7 @@ live link: https://spotlight-web.herokuapp.com/
 
 ## Tech and API's Used
 * Node.js
-* EJS for server sided rendering. We may transition to React.js
+* EJS for server sided rendering. We are transitioning to React.js
 * NewsAPI.org
 
 ## Feature List 
