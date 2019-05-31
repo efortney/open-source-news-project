@@ -1,0 +1,25 @@
+<% include ./partials/Navbar.ejs %>
+<div>
+  <!-- jumbotron -->
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-4">Welcome to Spotlight</h1>
+    <div class="container">
+      <p class="lead"> We're a simple news app that helps you see stories from only the
+        sites that you trust. Choose the sources that you want to see stories from, and we'll show them to you.
+        No suggestions, no hashtags, just the news that you want to see. </p>
+      </p>
+      <div class="row">
+        <div class="col-sm">
+          <a href="/topstories"><button type="button" class="btn btn-block btn-lg btn-primary">View Stories</button></a>
+        </div>
+        <div class="col-sm">
+            <a href="/sources"><button type="button" class="btn btn-block btn-lg btn-secondary">View Sources</button></a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <% include ./partials/Footer.ejs %>
+</div>
+

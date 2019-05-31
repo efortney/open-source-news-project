@@ -1,0 +1,19 @@
+
+<% include ./partials/Navbar.ejs %>
+
+<div class="container"> 
+    <% include ./partials/Search.ejs %>
+</div>
+
+<% stories.forEach( (story) => { %>
+  <div style="margin-top:12px" class="container">
+  <div class="card bg-light">
+    <div class="card-body">
+        <img style="max-height: 450px" src="<%= story.urlToImage %>" class="card-img-top" alt="<%= story.source.name %>">
+        <h4 class="card-title"><%= story.title %></h4>
+        <h5 class="card-text"><%= story.source.name %></h5>
+        <a target="_blank" href="<%= story.url %> "><button class="btn btn-block btn-outline-primary">Read</button></a>
+    </div>
+  </div>
+  </div>
+  <% }); %>
