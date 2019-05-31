@@ -4,6 +4,10 @@
   "description": "A simple news tool",
   "main": "index.js",
   "scripts": {
+    "install-root": "npm i",
+    "install-client": "npm i --prefix client",
+    "install-api": "npm i --prefix api",
+    "populate": "npm run install-root && npm run install-client && npm run install-api",
     "server": "nodemon index.js --prefix api",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

@@ -42,6 +42,9 @@ Feel free to log an issue and tag it as a feature request if you have an idea fo
 2. run ``` npm i ```
 3. run ``` npm start ``` 
 
+### Starting Both With Concurrently
+You are now able to start both the API server and the client server with one command. At the root of the project, run ``` npm run populate ```. This will install all dependencies for the api, client, and root directories. Once complete, run ``` npm run dev ``` to start both servers simultaneously. 
+
 **We are proxying client and api from port 3000 to 3001**
     
 ### Config.js
@@ -54,34 +57,40 @@ In order for you to develop and contribute, you will need to head over to NewsAP
     } 
 ```
 
-## API Structure 
+## Project Structure 
 ```
 ├── README.md
-├── config.js
-├── controller
-│   └── newsapi
-│       ├── Categories.js
-│       ├── Sources.js
-│       ├── Stories.js
-│       └── index.js
-├── helpers
-│   └── index.js
-├── index.js
+├── api
+│   ├── README.md
+│   ├── config.js
+│   ├── controller
+│   │   └── newsapi
+│   │       ├── Categories.js
+│   │       ├── Sources.js
+│   │       ├── Stories.js
+│   │       └── index.js
+│   ├── dev.js
+│   ├── helpers
+│   │   └── index.js
+│   ├── index.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── prod.js
+├── client
+│   ├── README.md
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── src
+│   │   ├── App.js
+│   │   ├── components
+│   │   ├── index.js
+│   │   └── serviceWorker.js
+│   └── yarn.lock
 ├── package-lock.json
 ├── package.json
-├── tree.txt
-└── views
-    ├── Categories.ejs
-    ├── Home.ejs
-    ├── Sources.ejs
-    ├── Stories.ejs
-    └── partials
-        ├── Footer.ejs
-        ├── Head.ejs
-        ├── Navbar.ejs
-        ├── Search.ejs
-        ├── SearchCategories.ejs
-        └── SearchSources.ejs
-
-5 directories, 21 files
+└── treeProject.txt
 ```
