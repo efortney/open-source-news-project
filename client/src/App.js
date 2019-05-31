@@ -1,16 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 
-
-function App() {
-  const makeReq = () => {
-    axios.get('/topstories');
+class App extends React.Component {
+  
+  render(){
+    return (
+      <div>
+      Spotlight
+      </div>
+    )
   }
-  return (
-    <div className="App">
-      <button onClick={makeReq}>Test</button>
-    </div>
-  );
 }
 
 export default App;

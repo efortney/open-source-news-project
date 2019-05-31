@@ -20,7 +20,7 @@ module.exports = (app, axios, newsApi) => {
       url: `https://newsapi.org/v2/everything?language=en&sources=${term}&language=en&apiKey=${apiKey}`
     }).then((data) => {
       if(data.data.articles.length > 0){
-        newsApi.gatherSourceStories(data.data.articles, res);
+        newsApi.gatherStories(data.data.articles, res);
       } else {
         res.redirect('/sources')
       }

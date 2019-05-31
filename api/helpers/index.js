@@ -15,9 +15,7 @@ module.exports = {
       };
       sources.push(source);
     });
-    res.render('Sources.ejs', {
-      sources: sources
-    });
+    res.json(sources);
   },
   /**
    * Gathers all stories from an endpoint
@@ -28,18 +26,6 @@ module.exports = {
     data.forEach(element => {
       stories.push(element);
     });
-    res.render('Stories.ejs', {
-      stories: stories
-    });
-  },
-
-  gatherSourceStories(data, res) {
-    let stories = [];
-    data.forEach(element => {
-      stories.push(element);
-    });
-    res.render('Stories.ejs', {
-      stories: stories
-    });
+    res.json(stories);
   }
 };
