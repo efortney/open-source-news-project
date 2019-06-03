@@ -23,7 +23,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/elliot-fortney-6ab4a5132/"
           >
-            <i class="fab fa-3x fa-linkedin-in" />
+            <i className="fab fa-3x fa-linkedin-in" />
           </a>
         </div>
         <div className="col-md-4">
@@ -32,7 +32,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             href="https://github.com/efortney/spotlight"
           >
-            <i class="fab fa-3x fa-github" />
+            <i className="fab fa-3x fa-github" />
           </a>
         </div>
       </div>

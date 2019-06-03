@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import TopStories from './TopStories';
-import Politics from './Politics';
-import Technology from './Technology';
-import Food from './Food';
-import Money from './Money';
+import TopStories from './groups/TopStories';
+import Politics from './groups/Politics';
+import Technology from './groups/Technology';
+import Food from './groups/Food';
+import Money from './groups/Money';
 import Navigation from './Navigation';
-import Footer from './Footer';
 import { connect } from 'react-redux';
 
 /**
@@ -29,7 +28,6 @@ class App extends Component {
           <Route path="/food" component={Food} />
           <Route path="/money" component={Money} />
         </div>
-        <Footer />
       </BrowserRouter>
     );
   }
