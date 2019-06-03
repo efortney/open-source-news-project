@@ -8,7 +8,7 @@ class SearchForm extends Component {
 
   renderInput = ({ input }) => {
     return (
-      <div className="form-control mr-sm-2">
+      <div type="search" placeholder="wallabees" className="form-control mr-sm-2">
         <input {...input} />
       </div>
     );
