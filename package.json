@@ -8,7 +8,7 @@
     "install-client": "npm i --prefix client",
     "install-api": "npm i --prefix api",
     "populate": "npm run install-root && npm run install-client && npm run install-api",
-    "dev": "npm run server & npm run start --prefix client",
+    "dev": "npm run start & npm run start --prefix client",
     "start": "node index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
