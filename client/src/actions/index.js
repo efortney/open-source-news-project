@@ -1,11 +1,12 @@
 import news from '../apis/news';
+import _ from 'lodash';
 
 /**
  * ## fetchTopStories
  * @param none
  * @returns Makes an api request to the backend, where we will populate a list of the top stories.
  */
-export const fetchTopStories = () => async dispatch => {
+export const fetchTopStories = () => _.memoize( async dispatch => {
   await news
     .get('/topstories')
     .then(data => {
@@ -14,9 +15,9 @@ export const fetchTopStories = () => async dispatch => {
     .catch(err => {
       console.error(err);
     });
-};
+});
 
-export const searchStories = formValues => async dispatch => {
+export const searchStories = formValues => _.memoize( async dispatch => {
   await news
     .get(`search/${formValues.term}`)
     .then(data => {
@@ -25,9 +26,9 @@ export const searchStories = formValues => async dispatch => {
     .catch(err => {
       console.error(err);
     });
-};
+});
 
-export const fetchStoriesByTerm = term => async dispatch => {
+export const fetchStoriesByTerm = term => _.memoize( async dispatch => {
   await news
     .get(`search/${term}`)
     .then(data => {
@@ -36,7 +37,7 @@ export const fetchStoriesByTerm = term => async dispatch => {
     .catch(err => {
       console.error(err);
     });
-};
+});
 
 export const darkModeOn = () => dispatch => {
   dispatch({
