@@ -8,8 +8,8 @@ class SearchForm extends Component {
 
   renderInput = ({ input }) => {
     return (
-      <div type="search" placeholder="wallabees" className="form-control mr-sm-2">
-        <input {...input} />
+      <div type="search">
+        <input className="form-control mr-sm-2" placeholder="wallabees" {...input} />
       </div>
     );
   };
@@ -19,13 +19,9 @@ class SearchForm extends Component {
       <form
         autoComplete="off"
         onSubmit={this.props.handleSubmit(this.onSubmit)}
-        className="form-inline my-2 my-lg-0"
+        className="form-inline "
       >
-        <Field
-          className="form-control mr-sm-2"
-          name="term"
-          component={this.renderInput}
-        />
+        <Field name="term" component={this.renderInput} />
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
@@ -34,4 +30,4 @@ class SearchForm extends Component {
   }
 }
 
-export default reduxForm({ form: 'searchForm'})(SearchForm);
+export default reduxForm({ form: 'searchForm' })(SearchForm);

@@ -51,6 +51,11 @@ class Navigation extends React.Component {
                 </Link>
               </li>
               <li className="nav-item ">
+                <Link className="nav-link" to="/money">
+                  Money
+                </Link>
+              </li>
+              <li className="nav-item ">
                 <Link className="nav-link" to="/food">
                   Food
                 </Link>

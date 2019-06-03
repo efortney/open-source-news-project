@@ -5,8 +5,9 @@ import TopStories from './TopStories';
 import Politics from './Politics';
 import Technology from './Technology';
 import Food from './Food';
-import About from './About';
+import Money from './Money';
 import Navigation from './Navigation';
+import Footer from './Footer';
 import { connect } from 'react-redux';
 
 /**
@@ -26,7 +27,9 @@ class App extends Component {
           <Route exact path="/politics" component={Politics} />
           <Route exact path="/technology" component={Technology} />
           <Route path="/food" component={Food} />
+          <Route path="/money" component={Money} />
         </div>
+        <Footer />
       </BrowserRouter>
     );
   }
