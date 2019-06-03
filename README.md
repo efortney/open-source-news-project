@@ -45,7 +45,7 @@ Feel free to log an issue and tag it as a feature request if you have an idea fo
 ### Starting Both With Concurrently
 You are now able to start both the API server and the client server with one command. At the root of the project, run ``` npm run populate ```. This will install all dependencies for the api, client, and root directories. Once complete, run ``` npm run dev ``` to start both servers simultaneously. 
 
-**We are proxying client and api from port 3000 to 3001**
+**We are proxying client and api from port 3000 to 5001**
     
 ### Config.js
 The config file is built in order to work with Heroku without exposing our precious. (Lord of the Rings, anyone?)

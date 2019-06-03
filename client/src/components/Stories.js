@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTopStories } from '../actions/';
+
+import StoryCard from './StoryCard';
 
 class Stories extends Component {
   componentDidMount() {
-    this.props.fetchTopStories();
+    this.props.load();
+  }
+
+  renderStories() {
+    return this.props.stories.map(story => {
+      return <StoryCard key={story.title} story={story} />;
+    });
   }
 
   render() {
-    return <div>Stories</div>;
+    return (
+      <div className="container">
+        <div className='card-columns'>
+        {this.renderStories()}
+        </div>
+      </div>
+      );
   }
 }
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => {
+  return {
+    stories: Object.values(state.stories)
+  };
+};
 
 export default connect(
-  null,
-  { fetchTopStories }
+  mapStateToProps, null
 )(Stories);

@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 
-class Sources extends Component {
+class Groups extends Component {
 
   render(){
     return (
@@ -11,4 +11,4 @@ class Sources extends Component {
   }
 }
 
-export default Sources;
+export default Groups;
