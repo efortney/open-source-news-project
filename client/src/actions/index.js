@@ -16,24 +16,36 @@ export const fetchTopStories = () => async dispatch => {
     });
 };
 
-export const fetchStoriesByTerm = (term) => async dispatch => {
-  await news.get(`search/${term}`)
+export const searchStories = formValues => async dispatch => {
+  await news
+    .get(`search/${formValues.term}`)
     .then(data => {
       dispatch({ type: 'FETCH_STORIES', payload: data.data });
     })
     .catch(err => {
       console.error(err);
     });
-}
+};
 
-export const darkModeOn= () => dispatch => {
+export const fetchStoriesByTerm = term => async dispatch => {
+  await news
+    .get(`search/${term}`)
+    .then(data => {
+      dispatch({ type: 'FETCH_STORIES', payload: data.data });
+    })
+    .catch(err => {
+      console.error(err);
+    });
+};
+
+export const darkModeOn = () => dispatch => {
   dispatch({
     type: 'DARK_MODE_ON'
   });
 };
 
-export const darkModeOff= () => dispatch => {
+export const darkModeOff = () => dispatch => {
   dispatch({
     type: 'DARK_MODE_OFF'
   });
-}
+};

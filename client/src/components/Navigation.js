@@ -1,20 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchStoriesByTerm } from '../actions';
+import { Link } from 'react-router-dom'
+import SearchForm from './SearchForm';
+import { searchStories } from '../actions';
 
 /**
  * Navigation bar
  * @type const
  */
 class Navigation extends React.Component {
+
+  onSubmit = formValues => {
+    this.props.searchStories(formValues);
+  }
+
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light  navbar-bg-light">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             Spotlight
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,40 +36,27 @@ class Navigation extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item ">
-                <a className="nav-link" href="/stories">
+                <Link className="nav-link" to="/stories">
                   Top Stories
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/politics">
+                <Link className="nav-link" to="/politics">
                   Politics
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/technology">
+                <Link className="nav-link" to="/technology">
                   Technology
-                </a>
+                </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="/food">
+                <Link className="nav-link" to="/food">
                   Food
-                </a>
+                </Link>
               </li>
             </ul>
-            <form onSubmit={fetchStoriesByTerm} className="form-inline my-2 my-lg-0">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                className="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
+            <SearchForm onSubmit={this.onSubmit} />
           </div>
         </nav>
       </div>
@@ -74,6 +67,6 @@ class Navigation extends React.Component {
 export default connect(
   null,
   {
-    fetchStoriesByTerm
+    searchStories
   }
 )(Navigation);

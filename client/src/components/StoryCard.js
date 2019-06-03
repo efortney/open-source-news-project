@@ -22,7 +22,7 @@ class StoryCard extends Component {
             target="_blank"
             rel="noopener noreferrer"
             href={this.props.story.url}
-            className="btn btn-primary"
+            className="btn btn-info"
           >
             Read Story
           </a>
