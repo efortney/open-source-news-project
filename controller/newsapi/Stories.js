@@ -6,15 +6,17 @@ module.exports = (app, axios, newsApi) => {
    * returns a json array of the top stories
    */
   app.get('/topstories', async (req, res) => {
-    let data = await axios({
+    await axios({
       method: 'GET',
       url: `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
-    }).then((data) => {
-      newsApi.gatherStories(data.data.articles, res);
-    }).catch((err) => {
-      console.error(err);
-      res.redirect('/topstories');
-    });
+    })
+      .then(data => {
+        newsApi.gatherStories(data.data.articles, res);
+      })
+      .catch(err => {
+        console.error(err);
+        res.redirect('/api/topstories');
+      });
   });
 
   /**
@@ -29,23 +31,25 @@ module.exports = (app, axios, newsApi) => {
 
   /**
    * ## Retrieve stories based on a query string
-   * @method get/searach/story
+   * @method get/search/story
    * returns a json array of news story objects
    */
   app.get('/search/:story', async (req, res) => {
     let term = req.params.story;
-    let data = await axios({
+    await axios({
       method: 'GET',
       url: `https://newsapi.org/v2/everything?q=${term}&apiKey=${apiKey}`
-    }).then((data) => {
-      if(data.data.articles.length > 0){
-        newsApi.gatherStories(data.data.articles, res);
-      } else {
-        res.redirect('/topstories')
-      }
-    }).catch((err) => {
-      console.error(err);
-      res.redirect('/topstories');
-    });
+    })
+      .then(data => {
+        if (data.data.articles.length > 0) {
+          newsApi.gatherStories(data.data.articles, res);
+        } else {
+          res.redirect('/topstories');
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        res.redirect('/topstories');
+      });
   });
 };

@@ -1,29 +1,20 @@
 {
-  "name": "spotlight",
+  "name": "confer",
   "version": "1.0.0",
-  "description": "A simple news tool",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "install-root": "npm i",
-    "install-client": "npm i --prefix client",
-    "install-api": "npm i --prefix api",
-    "populate": "npm run install-root && npm run install-client && npm run install-api",
-    "server": "nodemon index.js --prefix api",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/efortney/spotlight.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/efortney/spotlight/issues"
-  },
-  "homepage": "https://github.com/efortney/spotlight#readme",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "nodemon": "^1.19.0",
+    "npm": "^6.9.0"
   }
 }
