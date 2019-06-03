@@ -9,7 +9,7 @@ class Technology extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading  category='Technology' headings={['technology','tech','programming','computer science']} />
+        <CategoryHeading color='#2c3e50' text='white' category='Technology' headings={['technology','tech','programming','computer science']} />
         <Stories load={() => this.props.fetchStoriesByTerm('tech')} />
       </div>
     );

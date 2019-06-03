@@ -9,7 +9,7 @@ class Money extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading category='Money' headings={['finance','housing','investing','side hussles','economy']} />
+        <CategoryHeading color='#2ecc71' text='white' category='Money' headings={['finance','housing','investing','side hussles','economy']} />
         <Stories load={() => this.props.fetchStoriesByTerm('finance')} />
       </div>
     );

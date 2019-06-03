@@ -15,7 +15,7 @@ class CategoryHeading extends Component {
 
   render() {
     return (
-      <div className="container text-center jumbotron">
+      <div style={{backgroundColor: this.props.color, color : this.props.text}} className="container text-center jumbotron">
         <h2 className="display-2"> {this.props.category} </h2>
         <p className="lead">Featuring stories about </p>
         {this.renderHeadings()}

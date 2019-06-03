@@ -6,10 +6,11 @@ import CategoryHeading from '../CategoryHeading';
 import Stories from '../Stories';
 
 class Food extends React.Component {
+
   render() {
     return (
       <div>
-        <CategoryHeading category='Food' headings={['eating','recipes','restaurants','cooking']} />
+        <CategoryHeading text='white' color='#e74c3c' category='Food' headings={['eating','recipes','restaurants','cooking']} />
         <Stories load={() => this.props.fetchStoriesByTerm('food')} />
       </div>
     );

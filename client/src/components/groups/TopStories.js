@@ -9,7 +9,7 @@ class TopStories extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading category='Top Stories' headings={['politics','technology','finance']} />
+        <CategoryHeading color='#f39c12' text='white' category='Top Stories' headings={['politics','technology','finance']} />
         <Stories load={() => this.props.fetchTopStories()} />
       </div>
     );

@@ -7,7 +7,6 @@ import './styles/subCategory.css';
 class SubCateogry extends Component {
 
   render(){
-    console.log(this.props.category);
     return (
       <span style={{margin:'1.5px'}} onClick={() =>this.props.fetchStoriesByTerm(this.props.category)} className="badge badge-secondary">{this.props.category}</span>
     );
