@@ -7,7 +7,7 @@ class Money extends React.Component {
   render() {
     return (
       <div>
-        <Stories load={() => this.props.fetchStoriesByTerm('money')} />
+        <Stories load={() => this.props.fetchStoriesByTerm('finance')} />
       </div>
     );
   }

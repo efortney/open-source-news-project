@@ -6,6 +6,7 @@ const Footer = () => {
       className="container d-none d-lg-block text-center"
       style={{ margin: '15px' }}
     >
+    <hr />
       <div className="row">
         <div className="col-md-4">
           <a

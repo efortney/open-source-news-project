@@ -8,7 +8,7 @@ module.exports = (app, axios, newsApi) => {
   app.get('/topstories', async (req, res) => {
     await axios({
       method: 'GET',
-      url: `https://newsapi.org/v2/top-headlines?country=us&sortBy=popularity&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/top-headlines?country=us&sortBy=popularity&pageSize=100&apiKey=${apiKey}`
     })
       .then(data => {
         newsApi.gatherStories(data.data.articles, res);
@@ -38,7 +38,7 @@ module.exports = (app, axios, newsApi) => {
     let term = req.params.story;
     await axios({
       method: 'GET',
-      url: `https://newsapi.org/v2/everything?q=${term}&sortBy=relevancy&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/everything?q=${term}&sortBy=relevancy&pageSize=100&apiKey=${apiKey}`
     })
       .then(data => {
         if (data.data.articles.length > 0) {

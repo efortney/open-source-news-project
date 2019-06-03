@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import StoryCard from './StoryCard';
+import './cards.css';
 
 class Stories extends Component {
   componentDidMount() {
