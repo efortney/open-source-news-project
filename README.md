@@ -1,8 +1,7 @@
-# Spotlight
+# The Open Source News Project 
 
 ## About 
-A simple Node.js app for searching the news. I got tired of using Apple news and flipboard, all I ever see is Trump headlines. Boo. So here we are, writing code for something that probably already exists. 
-Contributions are welcome.
+The Open Source News Project is a news aggregator that is built with transparency in mind. There are many choices for where you get your news. The majority of these products are public or private companies that have not released their source code for the users to see. As such, there is no way of knowing what stories we are being suggested or why. The goal of this project is to create a community driven application built on the principle of non bias. This project is extremely early in development and is in need of contributors. Please check the How to Contribute page for more information. 
 
 live link: https://spotlight-web.herokuapp.com/
 
@@ -48,9 +47,8 @@ You are now able to start both the API server and the client server with one com
 **We are proxying client and api from port 3000 to 5001**
     
 ### Config.js
-The config file is built in order to work with Heroku without exposing our precious. (Lord of the Rings, anyone?)
-But really, we don't want any malicious 'contributors' to abuse our api key.
-In order for you to develop and contribute, you will need to head over to NewsAPI.org, create an account, and then use the api key that they give you. From the root directory, run ``` touch dev.js ```. Export a module as so:
+The config file is built in order to work with Heroku without exposing our private keys.
+In order for you to develop or contribute, you will need to head over to NewsAPI.org, create an account, and then use the api key that they give you. From the root directory, run ``` touch dev.js ```. Export a module as so:
 ``` 
     module.exports = {
         apinews : <yourApiKey>
