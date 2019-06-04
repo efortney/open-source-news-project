@@ -19,7 +19,7 @@ class Navigation extends React.Component {
       <div>
         <nav className="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
-            Spotlight
+            Open News Project
           </Link>
           <button
             className="navbar-toggler"
