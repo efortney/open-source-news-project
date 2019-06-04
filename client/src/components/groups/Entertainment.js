@@ -9,7 +9,7 @@ class Entertainment extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading color='#f368e0' text='white' category='Entertainment' headings={['movies','celebrities']}/>
+        <CategoryHeading color='#f368e0' text='white' category='Entertainment' headings={['movies','celebrities','music']}/>
         <Stories load={() => this.props.fetchStoriesByCategory('entertainment')} />
       </div>
     );

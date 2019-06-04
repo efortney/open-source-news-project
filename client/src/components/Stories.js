@@ -21,6 +21,7 @@ class Stories extends Component {
         <div className='card-columns'>
         {this.renderStories()}
         </div>
+        <p className='text-muted'> Powered by NewsAPI.org </p>
       </div>
       );
   }

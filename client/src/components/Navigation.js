@@ -17,7 +17,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
             Spotlight
           </Link>

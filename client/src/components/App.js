@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import About from './About';
 import TopStories from './groups/TopStories';
 import Politics from './groups/Politics';
 import Technology from './groups/Technology';
@@ -24,6 +25,7 @@ class App extends Component {
         <Navigation />
         <div>
           <Route exact path="/" component={TopStories} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/stories" component={TopStories} />
           <Route exact path="/politics" component={Politics} />
           <Route exact path="/technology" component={Technology} />
