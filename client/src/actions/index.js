@@ -17,6 +17,14 @@ export const fetchTopStories = () => _.memoize( async dispatch => {
     });
 });
 
+export const fetchStoriesByCategory = term => _.memoize( async dispatch => {
+  await news.get(`categories/${term}`).then( data => {
+    dispatch({
+      type: 'FETCH_STORIES', payload : data.data
+    });
+  })
+});
+
 export const searchStories = formValues => _.memoize( async dispatch => {
   await news
     .get(`search/${formValues.term}`)

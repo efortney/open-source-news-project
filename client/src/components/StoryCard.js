@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 class StoryCard extends Component {
   render() {
     return (
-      <div className="card" style={{ marginTop: '12px' }}>
+      <div className="card hoverable" style={{ marginTop: '12px' }}>
         <img
           className="card-img-top"
           src={this.props.story.urlToImage}

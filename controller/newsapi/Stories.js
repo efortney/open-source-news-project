@@ -38,7 +38,7 @@ module.exports = (app, axios, newsApi) => {
     let term = req.params.story;
     await axios({
       method: 'GET',
-      url: `https://newsapi.org/v2/everything?q=${term}&sortBy=relevancy&pageSize=100&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=relevancy&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`
     })
       .then(data => {
         if (data.data.articles.length > 0) {

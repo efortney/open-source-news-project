@@ -6,6 +6,7 @@ import Politics from './groups/Politics';
 import Technology from './groups/Technology';
 import Food from './groups/Food';
 import Money from './groups/Money';
+import Sports from './groups/Sports';
 import Navigation from './Navigation';
 import { connect } from 'react-redux';
 
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/technology" component={Technology} />
           <Route path="/food" component={Food} />
           <Route path="/money" component={Money} />
+          <Route path="/sports" component={Sports} />
         </div>
       </BrowserRouter>
     );
