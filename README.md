@@ -57,23 +57,8 @@ In order for you to develop or contribute, you will need to head over to NewsAPI
 
 ## Project Structure 
 ```
+├── LICENSE
 ├── README.md
-├── api
-│   ├── README.md
-│   ├── config.js
-│   ├── controller
-│   │   └── newsapi
-│   │       ├── Categories.js
-│   │       ├── Sources.js
-│   │       ├── Stories.js
-│   │       └── index.js
-│   ├── dev.js
-│   ├── helpers
-│   │   └── index.js
-│   ├── index.js
-│   ├── package-lock.json
-│   ├── package.json
-│   └── prod.js
 ├── client
 │   ├── README.md
 │   ├── package-lock.json
@@ -83,11 +68,52 @@ In order for you to develop or contribute, you will need to head over to NewsAPI
 │   │   ├── index.html
 │   │   └── manifest.json
 │   ├── src
-│   │   ├── App.js
+│   │   ├── actions
+│   │   │   └── index.js
+│   │   ├── apis
+│   │   │   └── news.js
 │   │   ├── components
+│   │   │   ├── About.js
+│   │   │   ├── App.js
+│   │   │   ├── CategoryHeading.js
+│   │   │   ├── Footer.js
+│   │   │   ├── Navigation.js
+│   │   │   ├── SearchForm.js
+│   │   │   ├── Stories.js
+│   │   │   ├── StoryCard.js
+│   │   │   ├── SubCategory.js
+│   │   │   ├── groups
+│   │   │   │   ├── Entertainment.js
+│   │   │   │   ├── Food.js
+│   │   │   │   ├── Home.js
+│   │   │   │   ├── Money.js
+│   │   │   │   ├── Politics.js
+│   │   │   │   ├── Sports.js
+│   │   │   │   ├── Technology.js
+│   │   │   │   └── TopStories.js
+│   │   │   └── styles
+│   │   │       ├── cards.css
+│   │   │       └── subCategory.css
 │   │   ├── index.js
+│   │   ├── reducers
+│   │   │   ├── index.js
+│   │   │   ├── newsReducer.js
+│   │   │   └── themeReducer.js
 │   │   └── serviceWorker.js
 │   └── yarn.lock
+├── config.js
+├── controller
+│   └── newsapi
+│       ├── Categories.js
+│       ├── Sources.js
+│       ├── Stories.js
+│       └── index.js
+├── dev.js
+├── helpers
+│   └── index.js
+├── index.js
 ├── package-lock.json
 ├── package.json
+├── prod.js
+└── tree.txt
 ```

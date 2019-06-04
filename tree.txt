@@ -1,0 +1,62 @@
+.
+├── LICENSE
+├── README.md
+├── client
+│   ├── README.md
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── src
+│   │   ├── actions
+│   │   │   └── index.js
+│   │   ├── apis
+│   │   │   └── news.js
+│   │   ├── components
+│   │   │   ├── About.js
+│   │   │   ├── App.js
+│   │   │   ├── CategoryHeading.js
+│   │   │   ├── Footer.js
+│   │   │   ├── Navigation.js
+│   │   │   ├── SearchForm.js
+│   │   │   ├── Stories.js
+│   │   │   ├── StoryCard.js
+│   │   │   ├── SubCategory.js
+│   │   │   ├── groups
+│   │   │   │   ├── Entertainment.js
+│   │   │   │   ├── Food.js
+│   │   │   │   ├── Home.js
+│   │   │   │   ├── Money.js
+│   │   │   │   ├── Politics.js
+│   │   │   │   ├── Sports.js
+│   │   │   │   ├── Technology.js
+│   │   │   │   └── TopStories.js
+│   │   │   └── styles
+│   │   │       ├── cards.css
+│   │   │       └── subCategory.css
+│   │   ├── index.js
+│   │   ├── reducers
+│   │   │   ├── index.js
+│   │   │   ├── newsReducer.js
+│   │   │   └── themeReducer.js
+│   │   └── serviceWorker.js
+│   └── yarn.lock
+├── config.js
+├── controller
+│   └── newsapi
+│       ├── Categories.js
+│       ├── Sources.js
+│       ├── Stories.js
+│       └── index.js
+├── dev.js
+├── helpers
+│   └── index.js
+├── index.js
+├── package-lock.json
+├── package.json
+├── prod.js
+└── tree.txt
+
+12 directories, 47 files
