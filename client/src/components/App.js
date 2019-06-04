@@ -8,6 +8,7 @@ import Food from './groups/Food';
 import Money from './groups/Money';
 import Sports from './groups/Sports';
 import Navigation from './Navigation';
+import Entertainment from './groups/Entertainment';
 import { connect } from 'react-redux';
 
 /**
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/technology" component={Technology} />
           <Route path="/food" component={Food} />
           <Route path="/money" component={Money} />
+          <Route path="/entertainment" component={Entertainment} />
           <Route path="/sports" component={Sports} />
         </div>
       </BrowserRouter>

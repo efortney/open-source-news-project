@@ -17,7 +17,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light  navbar-bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
             Spotlight
           </Link>
@@ -63,6 +63,11 @@ class Navigation extends React.Component {
               <li className="nav-item ">
                 <Link className="nav-link" to="/food">
                   Food
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/entertainment">
+                  Entertainment
                 </Link>
               </li>
             </ul>

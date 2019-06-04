@@ -9,7 +9,7 @@ class SearchForm extends Component {
   renderInput = ({ input }) => {
     return (
       <div type="search">
-        <input className="form-control mr-sm-2" placeholder="search" {...input} />
+        <input className="form-control mr-sm-2" placeholder="killer pandas..." {...input} />
       </div>
     );
   };
@@ -22,7 +22,7 @@ class SearchForm extends Component {
         className="form-inline "
       >
         <Field name="term" component={this.renderInput} />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button className="btn btn-raised btn-info my-2 my-sm-0" type="submit">
           Search
         </button>
       </form>

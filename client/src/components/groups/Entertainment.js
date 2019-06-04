@@ -5,12 +5,12 @@ import { fetchStoriesByCategory } from '../../actions';
 import CategoryHeading from '../CategoryHeading';
 import Stories from '../Stories';
 
-class Politics extends React.Component {
+class Entertainment extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading color='#9b59b6' text='white' category='Politics' headings={['president','foreign affairs','economy','public relations']}/>
-        <Stories load={() => this.props.fetchStoriesByCategory('politics')} />
+        <CategoryHeading color='#f368e0' text='white' category='Entertainment' headings={['movies','celebrities']}/>
+        <Stories load={() => this.props.fetchStoriesByCategory('entertainment')} />
       </div>
     );
   }
@@ -19,4 +19,4 @@ class Politics extends React.Component {
 export default connect(
   null,
   { fetchStoriesByCategory }
-)(Politics);
+)(Entertainment);

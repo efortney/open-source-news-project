@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchStoriesByTerm } from '../../actions';
+import { fetchStoriesByCategory } from '../../actions';
 
 import CategoryHeading from '../CategoryHeading';
 import Stories from '../Stories';
@@ -9,8 +9,8 @@ class Money extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading color='#2ecc71' text='white' category='Money' headings={['finance','housing','investing','side hussles','economy']} />
-        <Stories load={() => this.props.fetchStoriesByTerm('finance')} />
+        <CategoryHeading color='#2ecc71' text='white' category='Finance' headings={['finance','housing','investing','business','economy']} />
+        <Stories load={() => this.props.fetchStoriesByCategory('business')} />
       </div>
     );
   }
@@ -18,5 +18,5 @@ class Money extends React.Component {
 
 export default connect(
   null,
-  { fetchStoriesByTerm }
+  { fetchStoriesByCategory }
 )(Money);

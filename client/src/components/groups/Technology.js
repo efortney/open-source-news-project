@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchStoriesByTerm } from '../../actions';
+import { fetchStoriesByCategory } from '../../actions';
 
 import CategoryHeading from '../CategoryHeading';
 import Stories from '../Stories';
@@ -10,7 +10,7 @@ class Technology extends React.Component {
     return (
       <div>
         <CategoryHeading color='#2c3e50' text='white' category='Technology' headings={['technology','tech','programming','computer science']} />
-        <Stories load={() => this.props.fetchStoriesByTerm('tech')} />
+        <Stories load={() => this.props.fetchStoriesByCategory('technology')} />
       </div>
     );
   }
@@ -18,5 +18,5 @@ class Technology extends React.Component {
 
 export default connect(
   null,
-  { fetchStoriesByTerm }
+  { fetchStoriesByCategory }
 )(Technology);
