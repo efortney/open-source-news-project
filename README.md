@@ -6,8 +6,8 @@ The Open Source News Project is a news aggregator that is built with transparenc
 live link: https://spotlight-web.herokuapp.com/
 
 ## Tech and API's Used
-* Node.js
-* EJS for server sided rendering. We are transitioning to React.js
+* Node.js with Express 
+* React
 * NewsAPI.org
 
 ## Feature List 
