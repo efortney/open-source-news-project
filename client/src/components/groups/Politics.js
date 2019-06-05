@@ -9,7 +9,7 @@ class Politics extends React.Component {
   render() {
     return (
       <div>
-        <CategoryHeading color='#9b59b6' text='white' category='Politics' headings={['president','foreign affairs','economy','public relations']}/>
+        <CategoryHeading color='#9b59b6' text='white' category='Politics' headings={['donald trump','foreign affairs','economy','public relations']}/>
         <Stories load={() => this.props.fetchStoriesByCategory('politics')} />
       </div>
     );
