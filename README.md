@@ -1,7 +1,7 @@
 # The Open Source News Project 
 
 ## About 
-The Open Source News Project is a news aggregator that is built with transparency in mind. There are many choices for where you get your news. The majority of these products are public or private companies that have not released their source code for the users to see. As such, there is no way of knowing what stories we are being suggested or why. The goal of this project is to create a community driven application built on the principle of non bias. This project is extremely early in development and is in need of contributors. Please check the How to Contribute page for more information. 
+The Open Source News Project is a news aggregator that is built with the intention of leaving you out of the picture. It doesnt collect a single drop of data about you in order to keep the news you read as unbiased as possible. Results you see are a direct result of the keyword or topic that you search for. 
 
 live link: https://free-open-news.herokuapp.com/
 
